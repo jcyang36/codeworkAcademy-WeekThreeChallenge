@@ -33,9 +33,10 @@ public class WeekThreeChallenge{
      //----------  INPUT  -----------
      
      //----------  PROCESSING  ----------
-	
+	String nameString="";
 	Resumes r = new Resumes();
-	System.out.println(r.ResumesProcess());
+	r.ResumesProcess();
+	nameString=r.outString;
     
     String rep="Y";
     String rep_duty="Y";
@@ -43,8 +44,9 @@ public class WeekThreeChallenge{
     Education e = new Education();
  	 String resString="";
  	while(rep.equalsIgnoreCase("Y")){
- 		resString =e.EducationProcess();
-
+ 		
+ 		e.EducationProcess();
+ 		resString=e.outString;
  	 	count++;
 	 	System.out.println("Enter another educational achievement? Y/N: ");
 	 	rep = choice.next();
@@ -71,11 +73,12 @@ public class WeekThreeChallenge{
 	 	
 	 	System.out.println("Work");
     while(workrep.equalsIgnoreCase("Y") && workcount<10){
-
-				workString=w.WorkProcess();
+    	w.WorkProcess();
+    	workString=w.outString;
+	
 				
 				workcount++;
-			    System.out.println("Enter a new position for work(new comp)? (Y/N)" );
+			    System.out.println("Enter a new position for work(new comp)? (Y/N)  " );
 				workrep = choice.next();			
 				
     }
@@ -88,10 +91,12 @@ String	skill_rep="Y";
 	Skills s = new Skills();
 	System.out.println("Skills");
  	while(skill_rep.equalsIgnoreCase("Y") && skill_count<20){
- 			skillString=s.SkillsProcess();
+ 			s.SkillsProcess();
+ 			skillString=s.outString;
  	
 	 	     skill_count++;
-	 	  
+	 	  System.out.println("Enter a new skill?(Y/N) " );
+	 	  skill_rep=choice.next();
 	 	   
  	}
     //----------  PROCESSING  ----------

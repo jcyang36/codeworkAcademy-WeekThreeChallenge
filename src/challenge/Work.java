@@ -17,10 +17,10 @@ private static String WorkTitle;
 private static String WorkComp;
 private static String workDur; 
 private static String duty; 
-
+public static String outString="";
 
 	
-	public static String WorkProcess(){
+	public static void WorkProcess(){
 		Connection con = null;
 		Statement stmt =null;
 		PreparedStatement pstmt= null;
@@ -50,7 +50,7 @@ private static String duty;
 			WorkComp = sc.nextLine();
 			/*   Work Comp   */
 			/*   WorkDur   */
-			System.out.println("Enter the dates of employment ");
+			System.out.println("Enter the dates of employment: ");
 
 			while (!sc.hasNext()){
 				System.out.println("Enter dates of employment:");
@@ -94,7 +94,7 @@ private static String duty;
 			}
 			
 			/*          Select Statement              */
-			String outString="";
+
 			try{
 				Class.forName("com.mysql.jdbc.Driver");
 				con = DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?"+ "user=root&password=password" );
@@ -124,7 +124,7 @@ private static String duty;
 				}
 			}
 			
-			return outString;
+
 			}
 		
 	

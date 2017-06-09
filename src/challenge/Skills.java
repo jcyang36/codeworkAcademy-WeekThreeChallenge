@@ -12,7 +12,8 @@ import java.util.Scanner;
 public class Skills {
 	private static String skillName;
 	private static String proficiency; 
-	public static String SkillsProcess(){
+	public static String outString="";
+	public static void SkillsProcess(){
 		Connection con = null;
 		Statement stmt =null;
 		PreparedStatement pstmt= null;
@@ -70,7 +71,7 @@ public class Skills {
 			}
 			
 			/*          Select Statement              */
-			String outString="";
+			
 			try{
 				Class.forName("com.mysql.jdbc.Driver");
 				con = DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?"+ "user=root&password=password" );
@@ -80,7 +81,7 @@ public class Skills {
 				while(rs.next()){
 					/*System.out.println(rs.getString("skillName")+ " \n"+ rs.getString("proficiency"));
 					System.out.println();*/
-								outString=rs.getString("skillName")+ " \n"+ rs.getString("proficiency");
+								outString=rs.getString("skillName")+ ", "+ rs.getString("proficiency")+" \n";
 				}
 				
 				
@@ -99,7 +100,7 @@ public class Skills {
 				}
 			}
 
-			return outString;
+			
 			}
 		
 

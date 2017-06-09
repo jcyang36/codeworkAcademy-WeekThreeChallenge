@@ -18,10 +18,10 @@ private static String classOf;
 private static String schoolIn;
 private static int YearGrad;
 private static String tryYearGrad;
-
+public static String outString ="";
 
 	
-	public static String EducationProcess(){
+	public static void EducationProcess(){
 		Connection con = null;
 		Statement stmt =null;
 		PreparedStatement pstmt= null;
@@ -98,7 +98,7 @@ private static String tryYearGrad;
 			}
 			
 			/*          Select Statement              */
-			String outString ="";
+
 			try{
 				Class.forName("com.mysql.jdbc.Driver");
 				con = DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?"+ "user=root&password=password" );
@@ -106,9 +106,10 @@ private static String tryYearGrad;
 				String sql = "Select * from Education";
 				rs=stmt.executeQuery(sql);
 				while(rs.next()){
-					System.out.print(rs.getString("degree")+ " in "+ rs.getString("field")+",\n"+rs.getString("school")+", "+rs.getString("YearGrad")+"\t");
+					/*System.out.print(rs.getString("degree")+ " in "+ rs.getString("field")+",\n"+rs.getString("school")+", "+rs.getString("YearGrad")+"\t");
 					System.out.println();
-								
+					*/
+					outString=rs.getString("degree")+ " in "+ rs.getString("field")+",\n"+rs.getString("school")+", "+rs.getString("YearGrad")+"\t";
 				}
 				
 				
@@ -127,7 +128,7 @@ private static String tryYearGrad;
 				}
 			}
 			
-			return outString;
+
 			}
 		
 

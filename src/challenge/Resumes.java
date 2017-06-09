@@ -14,7 +14,8 @@ public class Resumes{
 	private static String Middle;
 	private static String LastName; 
 	private static String email;
-	public static String ResumesProcess(){
+	public static String outString="";
+	public static void ResumesProcess(){
 		Connection con = null;
 		Statement stmt =null;
 		PreparedStatement pstmt= null;
@@ -93,7 +94,7 @@ public class Resumes{
 			
 			/*          Select Statement              */
 			
-			String outString="";
+
 			try{
 				Class.forName("com.mysql.jdbc.Driver");
 				con = DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?"+ "user=root&password=password" );
@@ -121,7 +122,7 @@ public class Resumes{
 					e.printStackTrace();
 				}
 			}
-			return outString;
+			
 			}
 		
 
