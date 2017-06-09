@@ -1,0 +1,38 @@
+nputs
+
+1. User inputs name
+2.User inputs email
+3.User inputs education experience (1 to 10)
+4.User inputs work (0 to 10)
+5.User inputs duties(0 to infinity)
+6.User inputs skills(1 to 20)
+7.User inputs proficiency(1 to 3)
+8.
+9.
+
+
+Processing
+
+1.Loop through education experiences
+2.Loop through work experience
+3.Loop through duties
+4.Loop through skills
+5.Record education experience
+6.Record work experience
+7.Recprd ditoes
+8.Record skills
+
+
+
+
+Outputs
+
+1.Output name
+2.Output email
+3.Output education experience
+4.Output work with corresponding duties
+5.Output skills with corresponding proficiency
+6.
+7.
+8.
+9.
