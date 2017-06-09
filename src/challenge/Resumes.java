@@ -97,7 +97,8 @@ public class Resumes{
 
 			try{
 				Class.forName("com.mysql.jdbc.Driver");
-				con = DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?"+ "user=root&password=password" );
+				con = DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?"+ "user=root&password=password&useSSL=false" );
+				// con =DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?useSSL=false", "root", "password");
 				stmt= con.createStatement();
 				String sql = "Select * from Resumes";
 				rs=stmt.executeQuery(sql);

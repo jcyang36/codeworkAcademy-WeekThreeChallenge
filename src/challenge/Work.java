@@ -30,7 +30,7 @@ public static String outString="";
 		/*          Select Statement              */
 			try{Class.forName("com.mysql.jdbc.Driver");
 
-			con = DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?"+ "user=root&password=password" );
+			con = DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?"+ "user=root&password=password&useSSL=false" );
 			/*   work Title   */
 			System.out.println("Enter a position title: ");
 			Scanner sc = new Scanner(System.in);

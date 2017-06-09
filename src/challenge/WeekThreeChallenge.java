@@ -102,10 +102,12 @@ String	skill_rep="Y";
     //----------  PROCESSING  ----------
     
    //-----------  OUTPUT  ---------- 
-    
-    
+ 	System.out.println(nameString);
+ 	System.out.println("Education");
  	System.out.println(resString);
+ 	System.out.println("Experience");
  	System.out.println(workString);
+ 	System.out.println("Skills");
 	System.out.println(skillString);
        
  	

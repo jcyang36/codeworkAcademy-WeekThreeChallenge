@@ -101,7 +101,7 @@ public static String outString ="";
 
 			try{
 				Class.forName("com.mysql.jdbc.Driver");
-				con = DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?"+ "user=root&password=password" );
+				con = DriverManager.getConnection("jdbc:mysql://localhost/RoboResumeDB?"+ "user=root&password=password&useSSL=false" );
 				 stmt= con.createStatement();
 				String sql = "Select * from Education";
 				rs=stmt.executeQuery(sql);
